@@ -30,10 +30,16 @@ const Sizes = {
     --avatar-height: 32px;
     --avatar-font-size: var(--ads-v2-font-size-4);
   `,
+  lg: css`
+    --avatar-width: 128px;
+    --avatar-height: 128px;
+    --avatar-font-size: var(--ads-v2-font-size-8);
+  `,
 };
 
 export const StyledAvatar = styled.span<{
   size: AvatarSize;
+  hasGradientBorder?: boolean;
 }>`
   ${Variables};
 
@@ -57,12 +63,44 @@ export const StyledAvatar = styled.span<{
   font-size: var(--avatar-font-size);
   text-transform: uppercase;
 
+  ${({ hasGradientBorder }) =>
+    hasGradientBorder &&
+    css`
+      background: linear-gradient(
+        135deg,
+        #4fd1c5 0%,
+        #63b3ed 25%,
+        #7f9cf5 50%,
+        #9f7aea 75%,
+        #b794f4 100%
+      );
+      padding: 4px;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 4px;
+        right: 4px;
+        bottom: 4px;
+        border-radius: 50%;
+        background-color: var(--ads-v2-colors-content-avatar-surface-default-bg);
+        z-index: 0;
+      }
+    `}
+
   img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 50%;
     position: relative;
+    z-index: 1;
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
   }
 
   &.${AvatarGroupShowMoreClassName} {
