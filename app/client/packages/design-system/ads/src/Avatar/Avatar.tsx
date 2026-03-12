@@ -32,6 +32,7 @@ const Avatar = React.forwardRef(
     const {
       className,
       firstLetter,
+      hasGradientBorder,
       image,
       isTooltipEnabled = true,
       label,
@@ -64,6 +65,7 @@ const Avatar = React.forwardRef(
         <StyledAvatar
           aria-label={label}
           className={clsx(AvatarClassName, className)}
+          hasGradientBorder={hasGradientBorder}
           size={size}
           {...rest}
           ref={ref}

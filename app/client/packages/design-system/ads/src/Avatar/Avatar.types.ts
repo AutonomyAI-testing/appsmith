@@ -1,7 +1,7 @@
 import type { TooltipPlacement } from "../Tooltip/Tooltip.types";
 import type { Sizes } from "../__config__/types";
 
-export type AvatarSize = Extract<Sizes, "sm" | "md">;
+export type AvatarSize = Extract<Sizes, "sm" | "md" | "lg">;
 
 // Avatar props
 export type AvatarProps = {
@@ -21,6 +21,8 @@ export type AvatarProps = {
   tooltipPlacement?: TooltipPlacement;
   /** Whether to enable tooltip or not. */
   isTooltipEnabled?: boolean;
+  /** Whether to show a gradient border around the avatar. */
+  hasGradientBorder?: boolean;
 } & React.HTMLAttributes<HTMLSpanElement>;
 
 export type AvatarGroupAvatarProps = Omit<
