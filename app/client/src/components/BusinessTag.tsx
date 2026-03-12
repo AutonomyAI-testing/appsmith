@@ -1,6 +1,6 @@
 import React from "react";
 import type { TagSizes } from "@appsmith/ads";
-import { Tag } from "@appsmith/ads";
+import { Icon, Tag } from "@appsmith/ads";
 import { BUSINESS_TAG, createMessage } from "ee/constants/messages";
 
 const BusinessTag = ({
@@ -18,6 +18,7 @@ const BusinessTag = ({
       kind="premium"
       {...(size && { size })}
     >
+      <Icon name="star-line" size="sm" />
       {createMessage(BUSINESS_TAG)}
     </Tag>
   );
