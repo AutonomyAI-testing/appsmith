@@ -12,7 +12,7 @@ import {
   SettingsSubHeader,
 } from "pages/AdminSettings/Authentication/AuthPage";
 import styled from "styled-components";
-import BusinessTag from "components/BusinessTag";
+import PlanTag from "components/PlanTag";
 import { RampFeature, RampSection } from "utils/ProductRamps/RampsControlList";
 
 const StyledSettingsSubHeader = styled(SettingsSubHeader)`
@@ -30,7 +30,7 @@ const UpgradeBanner = () => {
     <div className="pb-4 pr-7">
       <ContentBox className="flex items-center justify-between p-6 border upgrade-banner">
         <main>
-          <BusinessTag />
+          <PlanTag plan="business" />
           <SettingsHeader
             className="mt-1"
             color="var(--ads-v2-color-fg-emphasis-plus)"

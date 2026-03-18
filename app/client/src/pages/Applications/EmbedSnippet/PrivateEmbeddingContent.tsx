@@ -11,7 +11,7 @@ import { useSelector } from "react-redux";
 import { getRampLink, showProductRamps } from "ee/selectors/rampSelectors";
 import { FEATURE_FLAG } from "ee/entities/FeatureFlag";
 import { useFeatureFlag } from "utils/hooks/useFeatureFlag";
-import EnterpriseTag from "components/EnterpriseTag";
+import PlanTag from "components/PlanTag";
 import { getIsAiAgentApp } from "ee/selectors/aiAgentSelectors";
 
 function PrivateEmbeddingContent(props: {
@@ -68,7 +68,7 @@ export function PrivateEmbedRampModal() {
             <Text kind="body-m">
               {createMessage(IN_APP_EMBED_SETTING.privateAppsText)}
             </Text>
-            <EnterpriseTag classes="ml-1 mt-0.5" />
+            <PlanTag classes="ml-1 mt-0.5" plan="enterprise" />
           </div>
           <Text
             className="w-7/10 block"

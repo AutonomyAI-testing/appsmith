@@ -3,8 +3,7 @@ import React from "react";
 import styled from "styled-components";
 import { Icon, Tooltip, Text, Link } from "@appsmith/ads";
 import type { Setting } from "ee/pages/AdminSettings/config/types";
-import EnterpriseTag from "components/EnterpriseTag";
-import BusinessTag from "components/BusinessTag";
+import PlanTag from "components/PlanTag";
 
 interface FieldHelperProps {
   setting: Setting;
@@ -89,8 +88,11 @@ export function FormGroup({ children, className, setting }: FieldHelperProps) {
             />
           </Tooltip>
         )}
-        {setting.isFeatureEnabled === false &&
-          (setting.isEnterprise === true ? <EnterpriseTag /> : <BusinessTag />)}
+        {setting.isFeatureEnabled === false && (
+          <PlanTag
+            plan={setting.isEnterprise === true ? "enterprise" : "business"}
+          />
+        )}
       </StyledLabel>
       {children}
       {setting.subText &&

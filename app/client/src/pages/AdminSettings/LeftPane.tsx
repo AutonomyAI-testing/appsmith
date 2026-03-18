@@ -12,8 +12,7 @@ import { Link, Text } from "@appsmith/ads";
 import { useDispatch, useSelector } from "react-redux";
 import { ReduxActionTypes } from "ee/constants/ReduxActionConstants";
 import { getCurrentUser } from "selectors/usersSelectors";
-import BusinessTag from "components/BusinessTag";
-import EnterpriseTag from "components/EnterpriseTag";
+import PlanTag from "components/PlanTag";
 import { getOrganizationPermissions } from "ee/selectors/organizationSelectors";
 import {
   getFilteredOrgCategories,
@@ -174,8 +173,11 @@ export function Categories({
               }
             >
               <SettingName active={active}>{config.title}</SettingName>
-              {showUpgradeTag &&
-                (config?.isEnterprise ? <EnterpriseTag /> : <BusinessTag />)}
+              {showUpgradeTag && (
+                <PlanTag
+                  plan={config?.isEnterprise ? "enterprise" : "business"}
+                />
+              )}
             </StyledLink>
             {showSubCategory && (
               <Categories

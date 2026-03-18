@@ -50,7 +50,7 @@ import {
   RampFeature,
   RampSection,
 } from "utils/ProductRamps/RampsControlList";
-import BusinessTag from "components/BusinessTag";
+import PlanTag from "components/PlanTag";
 import { selectFeatureFlags } from "ee/selectors/featureFlagsSelectors";
 import store from "store";
 import { isGACEnabled } from "ee/utils/planHelpers";
@@ -268,7 +268,7 @@ export function CustomRolesRamp() {
           <Text color="var(--ads-v2-color-fg-emphasis)" kind="heading-xs">
             {createMessage(CUSTOM_ROLE_TEXT)}
           </Text>
-          <BusinessTag size="md" />
+          <PlanTag plan="business" size="md" />
         </div>
         <Text kind="body-s">
           {createMessage(CUSTOM_ROLE_DISABLED_OPTION_TEXT)}

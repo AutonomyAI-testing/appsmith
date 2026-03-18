@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { Link, Tag, Text, Tooltip } from "@appsmith/ads";
-import { BUSINESS_TAG, createMessage } from "ee/constants/messages";
+import { Link, Text, Tooltip } from "@appsmith/ads";
+import PlanTag from "components/PlanTag";
 import { capitalizeFirstLetter } from "utils/helpers";
 import { getRampLink, showProductRamps } from "ee/selectors/rampSelectors";
 import {
@@ -114,9 +114,7 @@ export function DSDataFilter({
           {capitalizeFirstLetter(env.name)}
         </FilterComponentLabel>
         {isDisabled && (
-          <Tag isClosable={false} size="md" style={{ marginLeft: "auto" }}>
-            {createMessage(BUSINESS_TAG)}
-          </Tag>
+          <PlanTag plan="business" size="md" style={{ marginLeft: "auto" }} />
         )}
       </FilterComponentContainer>
     );
