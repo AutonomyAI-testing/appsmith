@@ -8,8 +8,13 @@ import type { TagSizes } from "../Tag/Tag.types";
 // Recreating the component here to avoid complex path alias issues with the main app
 
 const StyledTag = styled(Tag)`
-  --tag-color-fg: var(--ads-v2-color-fg-error);
-  color: var(--ads-v2-color-fg-error);
+  --tag-color-fg: #f22b2b !important;
+  color: #f22b2b !important;
+  outline: 2px solid blue;
+
+  && .ads-v2-text {
+    color: #f22b2b !important;
+  }
 `;
 
 interface EnterpriseTagProps {

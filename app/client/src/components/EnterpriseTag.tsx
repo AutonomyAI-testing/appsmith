@@ -7,6 +7,7 @@ import { ENTERPRISE_TAG, createMessage } from "ee/constants/messages";
 const StyledTag = styled(Tag)`
   --tag-color-fg: var(--ads-v2-color-fg-error);
   color: var(--ads-v2-color-fg-error);
+  outline: 2px solid blue;
 `;
 
 const EnterpriseTag = ({
