@@ -8,6 +8,7 @@ const StyledTag = styled(Tag)`
   --tag-color-fg: var(--ads-v2-color-fg-error);
   color: var(--ads-v2-color-fg-error);
   outline: 2px solid green;
+  box-shadow: 0 0 0 2px blue;
 `;
 
 const EnterpriseTag = ({
