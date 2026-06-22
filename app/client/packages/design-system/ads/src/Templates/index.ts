@@ -5,3 +5,4 @@ export * from "./EditableEntityName";
 export * from "./EditableDismissibleTab";
 export * from "./EntityTabsHeader";
 export * from "./EntityContextMenu";
+export * from "./LoginPage";
