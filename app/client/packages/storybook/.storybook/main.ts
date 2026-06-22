@@ -3,6 +3,7 @@ import * as glob from "glob";
 import * as path from "path";
 
 const dsDir = path.resolve(__dirname, "../../design-system");
+const appSrcDir = path.resolve(__dirname, "../../src");
 
 function getStories() {
   if (process.env.CHROMATIC) {
@@ -13,7 +14,11 @@ function getStories() {
     .sync(`${dsDir}/**/*.stories.@(ts|tsx)`, { nosort: true })
     .filter((storyPath) => !storyPath.includes("chromatic"));
 
-  return ["../../design-system/**/*.mdx", "../../icons/**/*.mdx", ...tsStories];
+  const appStories = glob
+    .sync(`${appSrcDir}/**/*.stories.@(ts|tsx)`, { nosort: true })
+    .map((absPath) => path.relative(path.resolve(__dirname, "../"), absPath));
+
+  return ["../../design-system/**/*.mdx", "../../icons/**/*.mdx", ...tsStories, ...appStories];
 }
 
 const config: StorybookConfig = {

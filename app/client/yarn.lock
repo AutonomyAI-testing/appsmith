@@ -3502,9 +3502,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@floating-ui/react@npm:^0.26.24":
-  version: 0.26.24
-  resolution: "@floating-ui/react@npm:0.26.24"
+"@floating-ui/react@npm:^0.26.24, @floating-ui/react@npm:^0.26.28":
+  version: 0.26.28
+  resolution: "@floating-ui/react@npm:0.26.28"
   dependencies:
     "@floating-ui/react-dom": ^2.1.2
     "@floating-ui/utils": ^0.2.8
@@ -3512,7 +3512,7 @@ __metadata:
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: c49fc0040d0a75608dc8f9b259027fbaebc8b04bc791b4ec38c680b551fffeaa19dac945ac5d10f75570862159353f0aab78451e1ecc59e0abea6f07251d4504
+  checksum: 1bfcccdb1f388ceb0075dc3e46934f4f04ef10bff2f971e1bf79067391c8729b366025caca0a42f5ca80854820a621a9edecbacdc046c33eb428f508fd6ce1f3
   languageName: node
   linkType: hard
 
@@ -8920,6 +8920,82 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@salt-ds/core@npm:^1.64.1":
+  version: 1.64.1
+  resolution: "@salt-ds/core@npm:1.64.1"
+  dependencies:
+    "@floating-ui/react": ^0.26.28
+    "@salt-ds/icons": ^1.18.0
+    "@salt-ds/styles": 0.3.0
+    "@salt-ds/window": 0.1.1
+    clsx: ^2.0.0
+    dom-accessibility-api: ^0.7.1
+    tabbable: ^6.0.0
+    use-sync-external-store: ^1.5.0
+  peerDependencies:
+    "@types/react": ">=16.14.0"
+    react: ">=16.14.0"
+    react-dom: ">=16.14.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 0508150e72d677438ad7cf4bbdf4f62c47f62e61b931446bb5773243dabf79ef44c2824d6a81fac7c8d670047245e7cc346fef851d7919c7557fcee1468107f5
+  languageName: node
+  linkType: hard
+
+"@salt-ds/icons@npm:^1.18.0":
+  version: 1.18.0
+  resolution: "@salt-ds/icons@npm:1.18.0"
+  dependencies:
+    "@salt-ds/styles": 0.3.0
+    "@salt-ds/window": 0.1.1
+    clsx: ^2.0.0
+  peerDependencies:
+    "@types/react": ">=16.14.0"
+    react: ">=16.14.0"
+    react-dom: ">=16.14.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 1f8d2c3f27f8be864b728021893790d42fbfcf1979347568706bd6aced70efd462c9cc8aaa53d6e797a75828510919eaaa473b99c4effdf6d717efa6394ec5e3
+  languageName: node
+  linkType: hard
+
+"@salt-ds/styles@npm:0.3.0":
+  version: 0.3.0
+  resolution: "@salt-ds/styles@npm:0.3.0"
+  peerDependencies:
+    "@types/react": ">=16.14.0"
+    react: ">=16.14.0"
+    react-dom: ">=16.14.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: ce4b3a53a480b511268321a72e74c195031989e64127d88f4c7a892d92a275777c0a8099b3ee3b99af46a92c88a8670d723176ef8d3877d15f030390dcc2edd5
+  languageName: node
+  linkType: hard
+
+"@salt-ds/theme@npm:^1.43.0":
+  version: 1.43.0
+  resolution: "@salt-ds/theme@npm:1.43.0"
+  checksum: d1f0dad1bb8b27f0da6ebc0ddcf86f0eb73bbf0f6e56ce55a89193587a7442afa9c5922f2a9fb27c6767319188db9515e93be3bfdce278bc8677cf4bfc29bc08
+  languageName: node
+  linkType: hard
+
+"@salt-ds/window@npm:0.1.1":
+  version: 0.1.1
+  resolution: "@salt-ds/window@npm:0.1.1"
+  peerDependencies:
+    "@types/react": ">=16.14.0"
+    react: ">=16.14.0"
+    react-dom: ">=16.14.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 66408cc1c982b2a5299e4defcfb55cc085e7cd070886693cdfc6683fd868d0c39354b419add3db52f693630a0e5b20e62dc92671ae32e863d94db9109fb10aae
+  languageName: node
+  linkType: hard
+
 "@sapphire/async-queue@npm:^1.5.3":
   version: 1.5.5
   resolution: "@sapphire/async-queue@npm:1.5.5"
@@ -13673,6 +13749,9 @@ __metadata:
     "@redux-saga/core": 1.1.3
     "@redux-saga/types": 1.2.1
     "@reduxjs/toolkit": ^2.4.0
+    "@salt-ds/core": ^1.64.1
+    "@salt-ds/icons": ^1.18.0
+    "@salt-ds/theme": ^1.43.0
     "@segment/analytics-next": ^1.76.0
     "@sentry/react": ^7.120.3
     "@sentry/utils": ^7.120.3
@@ -17908,6 +17987,13 @@ __metadata:
   version: 0.5.14
   resolution: "dom-accessibility-api@npm:0.5.14"
   checksum: 782c813f75a09ba6735ef03b5e1624406a3829444ae49d5bdedd272a49d437ae3354f53e02ffc8c9fd9165880250f41546538f27461f839dd4ea1234e77e8d5e
+  languageName: node
+  linkType: hard
+
+"dom-accessibility-api@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "dom-accessibility-api@npm:0.7.1"
+  checksum: 913ff6e0b7c008cb091f250d46ab3aed620c46d80de9208c1dc5163f2e5230a350b8b42c9deeed86b4fd80717d83405d8b6e817a0058dc5a4a81db4612fba6c1
   languageName: node
   linkType: hard
 
@@ -34735,12 +34821,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.4.0":
-  version: 1.4.0
-  resolution: "use-sync-external-store@npm:1.4.0"
+"use-sync-external-store@npm:^1.4.0, use-sync-external-store@npm:^1.5.0":
+  version: 1.6.0
+  resolution: "use-sync-external-store@npm:1.6.0"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: dc3843a1b59ac8bd01417bd79498d4c688d5df8bf4801be50008ef4bfaacb349058c0b1605b5b43c828e0a2d62722d7e861573b3f31cea77a7f23e8b0fc2f7e3
+  checksum: 61a62e910713adfaf91bdb72ff2cd30e5ba83687accaf3b6e75a903b45bf635f5722e3694af30d83a03e92cb533c0a5c699298d2fef639a03ffc86b469f4eee2
   languageName: node
   linkType: hard
 
