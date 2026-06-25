@@ -57,6 +57,16 @@ const KindMap = {
   `,
 };
 
+export const StyledDot = styled.span`
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--tag-color-fg);
+  flex-shrink: 0;
+  margin-right: var(--ads-v2-spaces-2);
+`;
+
 export const StyledTag = styled.span<{
   isClosed: boolean;
   kind?: TagKind;

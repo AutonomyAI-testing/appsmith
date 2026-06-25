@@ -1,7 +1,7 @@
 import React from "react";
 
-import type { TagProps } from "./Tag.types";
-import { StyledButton, StyledTag } from "./Tag.styles";
+import type { TagProps, TagSizes } from "./Tag.types";
+import { StyledButton, StyledDot, StyledTag } from "./Tag.styles";
 import { Text } from "../Text";
 
 /*TODO:
@@ -25,6 +25,7 @@ function Tag({
 
   return (
     <StyledTag className="ads-v2-tag" isClosed={isClosed} kind={kind} {...rest}>
+      <StyledDot aria-hidden="true" />
       <Text color="inherit" kind="body-s">
         {children}
       </Text>
@@ -48,8 +49,8 @@ function Tag({
 Tag.displayName = "Tag";
 
 Tag.defaultProps = {
-  size: "sm",
   isClosable: true,
+  size: "sm" as TagSizes,
 };
 
 export { Tag };

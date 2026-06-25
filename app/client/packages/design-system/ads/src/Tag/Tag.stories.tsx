@@ -1,42 +1,118 @@
 import React from "react";
 import { Tag } from "./Tag";
-import type { TagProps } from "./Tag.types";
-import type { StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/react";
+import styled from "styled-components";
 
-export default {
+const meta: Meta<typeof Tag> = {
   title: "ADS/Components/Tag",
   component: Tag,
 };
 
-// eslint-disable-next-line react/function-component-definition
-const Template = (args: TagProps) => {
-  return <Tag {...args} />;
-};
+export default meta;
 
-export const TagStory = Template.bind({}) as StoryObj;
+const AllKindsGrid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: flex-start;
+  padding: 16px;
+`;
+
+export const TagStory: StoryObj<typeof Tag> = {
+  args: {
+    children: "contact@appsmith.com",
+    isClosable: false,
+    size: "sm",
+  },
+};
 TagStory.storyName = "Tag";
-TagStory.args = {
-  children: "contact@appsmith.com",
-  isClosable: false,
-  size: "sm",
+
+export const AllKinds: StoryObj<typeof Tag> = {
+  render: () => (
+    <AllKindsGrid>
+      <Tag isClosable={false} kind="neutral" size="sm">
+        Neutral
+      </Tag>
+      <Tag isClosable={false} kind="info" size="sm">
+        Info
+      </Tag>
+      <Tag isClosable={false} kind="success" size="sm">
+        Success
+      </Tag>
+      <Tag isClosable={false} kind="warning" size="sm">
+        Warning
+      </Tag>
+      <Tag isClosable={false} kind="error" size="sm">
+        Error
+      </Tag>
+      <Tag isClosable={false} kind="special" size="sm">
+        Special
+      </Tag>
+      <Tag isClosable={false} kind="premium" size="sm">
+        Premium
+      </Tag>
+    </AllKindsGrid>
+  ),
 };
 
-export const SpecialTag = Template.bind({}) as StoryObj;
-SpecialTag.args = {
-  ...TagStory.args,
-  children: "Enterprise",
-  kind: "special",
+export const SuccessTag: StoryObj<typeof Tag> = {
+  args: {
+    children: "Deployed",
+    isClosable: false,
+    kind: "success",
+    size: "sm",
+  },
 };
 
-export const PremiumTag = Template.bind({}) as StoryObj;
-PremiumTag.args = {
-  ...TagStory.args,
-  children: "Business Edition",
-  kind: "premium",
+export const ErrorTag: StoryObj<typeof Tag> = {
+  args: {
+    children: "Failed",
+    isClosable: false,
+    kind: "error",
+    size: "sm",
+  },
 };
 
-export const TagCloseStory = Template.bind({}) as StoryObj;
-TagCloseStory.args = {
-  ...TagStory.args,
-  isClosable: true,
+export const WarningTag: StoryObj<typeof Tag> = {
+  args: {
+    children: "Degraded",
+    isClosable: false,
+    kind: "warning",
+    size: "sm",
+  },
+};
+
+export const InfoTag: StoryObj<typeof Tag> = {
+  args: {
+    children: "In Progress",
+    isClosable: false,
+    kind: "info",
+    size: "sm",
+  },
+};
+
+export const SpecialTag: StoryObj<typeof Tag> = {
+  args: {
+    children: "Enterprise",
+    isClosable: false,
+    kind: "special",
+    size: "sm",
+  },
+};
+
+export const PremiumTag: StoryObj<typeof Tag> = {
+  args: {
+    children: "Business Edition",
+    isClosable: false,
+    kind: "premium",
+    size: "sm",
+  },
+};
+
+export const TagCloseStory: StoryObj<typeof Tag> = {
+  args: {
+    children: "contact@appsmith.com",
+    isClosable: true,
+    size: "sm",
+  },
 };
